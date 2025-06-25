@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tesla</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    .whatsnew {
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      height: 100vh;
+      /* Make the container take the full viewport height */
+      margin: 0 auto;
+      /* Center the container horizontally (if it has a width) */
+
+    }
+
+    .whatsnew h1 {
+
+      font-weight: 700;
+    }
+
+    /* PART PAGE  */
+
+    .chobi {
+      display: flex;
+      width: 100%;
+      height: 450px;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .chobi img {
+      width: 15%;
+      height: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 2px solid rgba(225, 255, 255, 0.458);
+    }
+
+    .chobi img:hover {
+      width: 28%;
+      transition: 2s ease-in-out;
+    }
+
+    /* Font Awesome for Icons */
+
+    .footer a {
+      color: #fff;
+      /* White text for links */
+      text-decoration: none;
+      /* Remove underline */
+    }
+
+    .footer a:hover {
+      color: #ccc;
+      /* Light gray on hover */
+    }
+
+    .caard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Base button styles */
+    .btn {
+      width: 65%;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      /* Smooth transition */
+    }
+
+    /* Hover effect */
+    .btn:hover {
+
+      color: #f7f1f1;
+      /* White text on hover */
+      text-decoration: none;
+      /* Remove underline */
+      border: 2px solid #8a8989;
+      /* Add a border on hover */
+      cursor: pointer;
+      /* Change cursor to a pointer on hover */
+      box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);
+      /* Add a shadow on hover */
+    }
+
+    .hover-effect {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-effect:hover {
+      transform: scale(1.025);
+      /* Slightly zoom in */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      /* Add shadow effect */
+    }
+
+    .hover-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+    .hover-card:hover {
+      transform: translateY(-10px);
+      /* Lift the card */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      /* Add a larger shadow */
+      background-color: #f8f9fa;
+      /* Light background color on hover */
+    }
+     /* Custom hover effect for the gray blur */
+     .gray-blur-hover-effect {
+        position: relative;
+        overflow: hidden; /* Prevents the effect from spilling out of the card */
+        transition: box-shadow 0.93s ease;
+    }
+    .gray-blur-hover-effect::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -90%;
+        width: 100%;
+        height: 100%;
+        background: rgba(128, 128, 128, 0.5); /* Gray color with transparency */
+        transition: left 0.94s ease; /* Controls the speed of the movement */
+    }
+
+    .gray-blur-hover-effect:hover::after {
+        left: 100%; /* Moves the gray blur from left to right */
+    }
+    .gray-blur-hover-effect:hover {
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Optional shadow effect on hover */
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <!-- carosoul section  -->
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/carosoul1.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Tesla Cars</h5>
+          <p>Brings out the first ever breakthrough in the Self-Driving cars industry.
+            <br>
+            Car with a fully automated works on Battery charging system.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/carosoul2.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/carosoul4.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+  <!-- nav section  -->
+  <div class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-dark text-white">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-secondary text-white" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+  <br>
+
+
+  <!-- Whats new Section  -->
+
+  <div class="whatsnew">
+    <h1>Whats New!</h1>
+
+
+    <!-- Content of parts -->
+
+
+    <div class="chobi">
+
+      <img src="images/img.jpg" alt="Image 1">
+      <img src="images/img2.png" alt="Image 2">
+      <img src="images/img3.jpg" alt="Image 3">
+      <img src="images/img5.jpg" alt="Image 5">
+      <img src="images/img6.avif" alt="Image 6">
+      <img src="images/img4.jpg" alt="Image 4">
+
+    </div>
+
+
+
+    <div class="container card shadow-lg text-white" style="margin-top: 50px; background-color: #1b1a1a96;">
+      <h2 style="font-size:x-large; font-weight: 600;" class="mt-4">Brain Chip- Nano Technologoy</h2>
+
+      <p class="">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero facilis repellat repudiandae delectus
+        illum
+        ipsam natus quidem, in amet quisquam vitae est, praesentium quo voluptatibus, aut id suscipit rem
+        corrupti.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse cum ducimus voluptas atque? Est aliquid
+        laborum, sed dolorum expedita deserunt vel consectetur, id iure numquam dolores ratione eos pariatur
+        cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae blanditiis ea repellat saepe
+        pariatur aliquid! A aspernatur placeat, eligendi quaerat facilis soluta ipsum quibusdam necessitatibus
+        quasi, fuga esse, nobis ratione.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="row p-4" style="background-color: #8a89891f;">
+    <div class="col-md-8 container card shadow-lg hover-card">
+      <h3 style="font-weight: bold;" class="p-2 text-center mt-4">Bionic Chip</h3>
+
+      <p class="p-5 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        vero a, soluta asperiores aliquam
+        tempora dolor eligendi iusto officiis nam doloremque. Amet, delectus aliquam error maxime impedit odio
+        iusto. Incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vero a, soluta
+        asperiores aliquam
+        tempora dolor eligendi iusto officiis nam doloremque. Amet, delectus aliquam error maxime impedit odio
+        iusto. Incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vero a, soluta
+        asperiores aliquam
+        tempora dolor eligendi iusto officiis nam doloremque. Amet, delectus aliquam error maxime impedit odio
+        iusto. Incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vero a, soluta
+        asperiores aliquam
+        tempora dolor eligendi iusto officiis nam doloremque. Amet, delectus aliquam error maxime impedit odio
+        iusto. Incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vero a, soluta
+        asperiores aliquam
+        tempora dolor eligendi iusto officiis nam doloremque. Amet, delectus aliquam error maxime impedit odio
+        iusto. Incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit fugiat assumenda
+        eligendi officiis, sunt esse incidunt similique vitae sapiente sint reiciendis, et est obcaecati numquam
+        accusantium eaque aspernatur natus ex!Incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+        fugiat assumenda
+        eligendi officiis, sunt esse incidunt similique vitae sapiente sint reiciendis, et est obcaecati numquam
+        accusantium eaque aspernatur natus ex!Incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+        fugiat assumenda
+        eligendi officiis, sunt esse incidunt similique vitae sapiente sint reiciendis, et est obcaecati numquam
+        accusantium eaque aspernatur natus ex!Incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+    <div class="col-md-4">
+      <img src="images/img.jpg" class="img-thumbnail w-10 hover-effect" alt="">
+    </div>
+
+  </div>
+
+
+  <!-- Container with Cards -->
+<div class="container mt-3">
+  <h2>Card Image</h2>
+  <p>Image at the top (card-img-top):</p>
+
+  <div class="d-flex flex-wrap justify-content-start">
+      <!-- First Card with normal hover effect -->
+      <div class="card custom-hover-effect" style="width: 400px; margin-right: 20px; margin-bottom: 20px;">
+          <img class="card-img-top shadow-lg" src="images/carosoul3.jpeg" alt="Card image" style="width:100%">
+          <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+              <a href="#" class="btn btn-dark">See Profile</a>
+          </div>
+      </div>
+
+       <!-- Second Card with gray blur hover effect -->
+       <div class="card gray-blur-hover-effect" style="width: 400px; margin-right: 20px; margin-bottom: 20px;">
+        <img class="card-img-top shadow-lg" src="images/carosoul3.jpeg" alt="Card image" style="width:100%">
+        <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+            <a href="#" class="btn btn-dark">See Profile</a>
+        </div>
+    </div>
+</div>
+</div>
+  
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">John Doe</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex">
+          <!-- Image on the left -->
+          <img src="images/carosoul3.jpeg" alt="John Doe" class="img-fluid rounded me-4" style="width: 150px; height: 100px;">
+          <!-- Text on the right -->
+          <div>
+            <h4>John Doe</h4>
+            <p>John Doe is an architect and engineer. He has designed many buildings around the world and is renowned for his innovative approach to modern architecture.</p>
+            <p>Some more detailed information about his achievements, projects, and career highlights.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies (ensure you have these files included) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <!-- table section  -->
+
+
+
+  <div class="container mt-5">
+    <h2>Tesla Products & Their Stock Values</h2>
+    <p>Combine .table-dark and .table-striped to create a dark, striped table:</p>
+    <table class="table table-dark table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@example.com</td>
+        </tr>
+        <tr>
+          <td>Mary</td>
+          <td>Moe</td>
+          <td>mary@example.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- another card  -->
+
+  <div class="container mt-3">
+    <h2>Card Image</h2>
+    <p>Image at the top (card-img-top):</p>
+    <div class="card" style="width:400px">
+      <img class="card-img-top shadow-lg" src="images/carosoul3.jpeg" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+        <a href="#" class="btn btn-dark">See Profile</a>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <!-- Quick Links -->
+          <div class="col-md-4 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="col-md-4 mb-4">
+            <h5>Follow Us</h5>
+            <ul class="list-unstyled">
+              <li><a href="#"><i class="fab fa-facebook-f me-2"></i>Facebook</a></li>
+              <li><a href="#"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+              <li><a href="#"><i class="fab fa-instagram me-2"></i>Instagram</a></li>
+              <li><a href="#"><i class="fab fa-linkedin me-2"></i>LinkedIn</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-md-4 mb-4">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-map-marker-alt me-2"></i>123 Main St, City, Country</li>
+              <li><i class="fas fa-phone me-2"></i>+1 (123) 456-7890</li>
+              <li><i class="fas fa-envelope me-2"></i>info@example.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Notice -->
+        <div class="text-center mt-4">
+          <p class="mb-0">&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!-- javascript section -->
+
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+</body>
+
+</html>
